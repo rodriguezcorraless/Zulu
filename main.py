@@ -1,13 +1,43 @@
 import urllib
-
+import datetime
 import pymongo
+import pandas as pd
 
 client = pymongo.MongoClient("mongodb+srv://Aidan:" + urllib.parse.quote_plus("W@sab1dog") + "@cluster0.uobls.mongodb.net/Flightdb?retryWrites=true&w=majority")
 db = client.Flightdb
 flights = db.Flights
-#flightDoc = {"flight_date":"2021-03-14","flight_status":"scheduled","dparture":{"airport":"Boryspil (Borispol)","timezone":"Europe\/Kiev","iata":"KBP","icao":"UKBB","terminal":"D","gate":"D16","delay":None,"scheduled":"2021-03-14T10:00:00+00:00","estimated":"2021-03-14T10:00:00+00:00","actual":None,"estimated_runway":None,"actual_runway":None},"arrival":{"airport":"Schiphol","timezone":"Europe\/Amsterdam","iata":"AMS","icao":"EHAM","terminal":None,"gate":"G2","baggage":None,"delay":None,"scheduled":"2021-03-14T12:05:00+00:00","estimated":"2021-03-14T12:05:00+00:00","actual":None,"estimated_runway":None,"actual_runway":None},"airline":{"name":"KLM","iata":"KL","icao":"KLM"},"flight":{"number":"3097","iata":"KL3097","icao":"KLM3097","codeshared":{"airline_name":"uia","airline_iata":"ps","airline_icao":"aui","flight_number":"101","flight_iata":"ps101","flight_icao":"aui101"}},"aircraft":None,"live":None},{"flight_date":"2021-03-14","flight_status":"scheduled","departure":{"airport":"Boryspil (Borispol)","timezone":"Europe\/Kiev","iata":"KBP","icao":"UKBB","terminal":"D","gate":"D2","delay":None,"scheduled":"2021-03-14T09:50:00+00:00","estimated":"2021-03-14T09:50:00+00:00","actual":None,"estimated_runway":None,"actual_runway":None},"arrival":{"airport":"Ataturk Airport","timezone":"Europe\/Istanbul","iata":"IST","icao":"LTFM","terminal":None,"gate":None,"baggage":None,"delay":None,"scheduled":"2021-03-14T12:50:00+00:00","estimated":"2021-03-14T12:50:00+00:00","actual":None,"estimated_runway":None,"actual_runway":None},"airline":{"name":"Turkish Airlines","iata":"TK","icao":"THY"},"flight":{"number":"458","iata":"TK458","icao":"THY458","codeshared":None},"aircraft":None,"live":None}
-#flights.insert_many(flightDoc)
-location = input("Location")
-doc = flights.find({"departure.airport":location})
-for x in doc:
-    print(x)
+flightDoc = {"flight_date": "2021-03-17", "flight_status": "scheduled",
+             "dparture":{"airport": "Adolfo Suárez Airport", "timezone": "Europe/Spain", "iata": "MAD", "icao": "KBOS",
+                          "terminal": "T3", "gate": "H22", "delay": None, "scheduled": "2021-03-14T10:00:00+00:00",
+                          "estimated": "2021-03-17T15:00:00+00:00", "actual": None, "estimated_runway": None,
+                          "actual_runway": None},
+             "arrival": {"airport": "Logan International Airport", "timezone": "Europe\/Amsterdam", "iata": "BOS", "icao": "EHAM",
+                         "terminal": "B", "gate": "B10", "baggage": None, "delay": None,
+                         "scheduled": "2021-03-17T12:07:00+00:00", "estimated": "2021-03-17T12:05:00+00:00",
+                         "actual": None, "estimated_runway": None, "actual_runway": None},
+             "airline": {"name": "United Airlines", "iata": "UA", "icao": "DAL"},
+             "flight": {"number": "4153", "iata": "DL3097", "icao": "DAL3097", "price":"306",
+                        "codeshared": {"airline_name": "uia", "airline_iata": "ps", "airline_icao": "aui",
+                                       "flight_number": "101", "flight_iata": "ps101", "flight_icao": "aui101"}},
+             "aircraft": None, "live": None}, \
+            {"flight_date": "2021-03-17", "flight_status": "scheduled",
+             "dparture":{"airport": "Adolfo Suárez Airport", "timezone": "America/New_York", "iata": "MAD", "icao": "KBOS",
+                          "terminal": "T1", "gate": "H14", "delay": None, "scheduled": "2021-03-14T6:00:00+00:00",
+                          "estimated": "2021-03-17T10:00:00+00:00", "actual": None, "estimated_runway": None,
+                          "actual_runway": None},
+             "arrival": {"airport": "Logan International Airport", "timezone": "Europe\/Amsterdam", "iata": "BOS", "icao": "EHAM",
+                         "terminal": "E", "gate": "E7", "baggage": None, "delay": None,
+                         "scheduled": "2021-03-17T12:14:00+00:00", "estimated": "2021-03-17T12:05:00+00:00",
+                         "actual": None, "estimated_runway": None, "actual_runway": None},
+             "airline": {"name": "Delta", "iata": "DL", "icao": "DAL"},
+             "flight": {"number": "4179", "iata": "DL3097", "icao": "DAL3097", "price":"$479",
+                        "codeshared": {"airline_name": "uia", "airline_iata": "ps", "airline_icao": "aui",
+                                       "flight_number": "101", "flight_iata": "ps101", "flight_icao": "aui101"}},
+             "aircraft": None, "live": None}
+flights.insert_many(flightDoc)
+
+
+
+
+
+
