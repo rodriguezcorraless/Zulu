@@ -5,8 +5,7 @@ from flask import Flask, redirect, url_for, request, render_template
 from pymongo import MongoClient
 import pandas as pd
 
-client = pymongo.MongoClient("mongodb+srv://Aidan:" + urllib.parse.quote_plus(
-    "#") + "@cluster0.uobls.mongodb.net/Flightdb?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://Aidan:" + urllib.parse.quote_plus("W@sab1dog") + "@cluster0.uobls.mongodb.net/Flightdb?retryWrites=true&w=majority")
 db = client.Flightdb
 flights = db.Flights
 
@@ -25,7 +24,6 @@ def login():
         flightDoc = flights.find({"dparture.iata": flightReq['origin'], "arrival.iata": flightReq['destination'],
                                   "flight_date": flightReq["date"]})
         flightData = [flight for flight in flightDoc]
-
         df = format_dataframe(flightData)
 
         return render_template('zulu_response.html', tables=[df.to_html(classes="data")])
