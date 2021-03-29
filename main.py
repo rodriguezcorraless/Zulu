@@ -3,7 +3,7 @@ import datetime
 import pymongo
 import pandas as pd
 
-client = pymongo.MongoClient("mongodb+srv://Aidan:" + urllib.parse.quote_plus("W@sab1dog") + "@cluster0.uobls.mongodb.net/Flightdb?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://Aidan:" + urllib.parse.quote_plus("#") + "@cluster0.uobls.mongodb.net/Flightdb?retryWrites=true&w=majority")
 db = client.Flightdb
 flights = db.Flights
 flightDoc = {"flight_date": "2021-03-17", "flight_status": "scheduled",
