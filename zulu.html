@@ -1,8 +1,9 @@
+
 <!doctype html>
 <html lang="en">
 
 <head>
-    <title>Epidemiology</title>
+    <title>Zulu</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -33,7 +34,7 @@
 <body id="myPage">
 
 
-
+  
 
     <div class="container-fluid">
         <div class="row">
@@ -46,9 +47,9 @@
                             <br>
                         </div>
                     </div>
-
+                    
                     <br>
-                <form action="http://localhost:5000/login" method = "post">
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -71,7 +72,7 @@
                                         <div class="input-group-text">Destination</div>
                                     </div>
                                     <input type="text" id="destination" name="destination"
-                                        placeholder="e.g Madrid" class="form-control"
+                                        placeholder="e.g Madrid" class="form-control" 
                                         oninput="validity.valid||(value='');">
                                 </div>
                             </div>
@@ -87,8 +88,21 @@
                                         <div class="input-group-text">Date</div>
                                     </div>
                                     <input type="date" id="date" name="date"
-                                        placeholder="" class="form-control"
-                                        oninput="validity.valid||(value='');">
+                                        placeholder="" class="form-control" 
+                                        oninput="validity.valid||(value='');"> 
+                                </div>
+                            </div>
+                        </div>
+                      
+                      <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="sr-only" for="inlineFormInputGroupUsername">comfort</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">Comfort</div>
+                                    </div>
+                                    <input type="number" id="comfort" name="comfort" placeholder="0 to find cheapest 100 to find shortest (0-100%)" 
+					class="form-control" min="0" max="100" oninput="validity.valid||(value='');">
                                 </div>
                             </div>
                         </div>
@@ -98,17 +112,21 @@
                         Look for flights
                     </button>
                     <br>
-                </form>
+                 <div style="position:relative;top:150px;">
                     <div class="container">
-                        <div id="flight_info_container" class="row">
-                            <div class="col-lg-8 mx-auto">
-                                <div id="flight_info">
-
+                        <div id="model_container" class="row">
+                            <div class="col-lg-10 mx-auto">
+                                <div id="model">
+                                   <h4>
+                                     Flights
+                                  </h4>
+                           
 
                                 </div>
                             </div>
                         </div>
                     </div>
+                      </div>
                 </div>
             </div>
         </div>
