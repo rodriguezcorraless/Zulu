@@ -13,6 +13,6 @@ def expedia_scrape(origin, destination, depart_date):
         if 'id' in label.attrs:
             ids.append(label)
     return ids
-
+#wtf are you talking about
 
 
