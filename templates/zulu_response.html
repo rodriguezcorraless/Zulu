@@ -120,9 +120,9 @@
                                 <div id="model">
                                    <body>
                                      {% for table in tables %}
-
+					{% for row in table %}
                                     {{ table|safe }}
-<button id="{{ table.ID }}" name="{{ table.ID }}" type="submit"
+<button id="{{ row.ID }}" name="{{ row.ID }}" type="submit"
 	class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
         Book a flight
 </button>
