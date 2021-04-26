@@ -120,15 +120,16 @@
                                 <div id="model">
                                    <body>
                                      {% for table in tables %}
-					{% for row in table %}
                                     {{ table|safe }}
-<button id="{{ row.ID }}" name="{{ row.ID }}" type="submit"
-	class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
-        Book a flight
-</button>
-
+                                     <form action="http://localhost:5000/charge" method = "post">
+                                            <button id="{{ table.ID }}" name="{{ table.ID }}" type="submit"
+                                                class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
+                                                    Book a flight
+                                            </button>
+                                     </form>
 <br>
-<br>  
+<br>
+
                                        {% endfor %}
                                   </body>
                             </div>
@@ -136,11 +137,7 @@
                     </div>
                 </div>
             </div>
-                <button id="_submit" name="submit" type="submit"
-                    class="subscribe btn btn-primary btn-block rounded-pill shadow-sm">
-                        Book a flight
-                </button>
-                        <br>
+
         </div>
     </div>
 </body>

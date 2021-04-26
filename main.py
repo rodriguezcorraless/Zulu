@@ -34,7 +34,7 @@ flightDoc = {"flight_date": "2021-04-21", "flight_status": "scheduled",
                         "codeshared": {"airline_name": "uia", "airline_iata": "ps", "airline_icao": "aui",
                                        "flight_number": "101", "flight_iata": "ps101", "flight_icao": "aui101"}},
              "aircraft": None, "live": None}
-flights.insert_many(flightDoc)
+#flights.insert_many(flightDoc)
 
 
 
