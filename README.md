@@ -1,19 +1,29 @@
-Introduction
-Briefly describe what your project is all about.
+# Introduction
+This is a recreation of an online travel agency for our software engineering class. We're working on an interface to search for flights and rank them by price, comfort, duration etc. The project ended up being good practice with end to end development. Currently we have a user interface where users can look up and book flights stored in our database. 
 
-Functions
-List all the functions with their sub functions of your application.
+# Functions
+1. Search for a flight
+   * Search one way flight
+   * Search round trip flight
+2. Book a Flight
+   * Checkout
 
-Function #1
-Sub function #1
-Sub function #2
-Function #2
-Sub function #1
-Function #3
-...
-Getting Started
-Installation and Setup
-List all the steps on how to install and setup your project
+# Installation
+Start by cloning this repostory.
 
-Run
-List all the steps on how to run your project
+    > git clone git://github.com/rodriguezcorraless/Zulu
+
+Make sure python3 is installed.  
+The running environment requires Flask and Pandas. 
+https://flask.palletsprojects.com/en/1.1.x/installation/
+https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html
+
+We used the pymongo interface to interact to preform database operations.
+
+
+#Run
+From your IDE or commandline run the server file flight_app.py.
+
+    $python flight_app.py
+
+Next open the main html template zulu.html in your web browser. You should be able to search for flights based on location and date.
