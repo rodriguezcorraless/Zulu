@@ -7,7 +7,7 @@ import pandas as pd
 import format
 
 client = pymongo.MongoClient("mongodb+srv://Aidan:" + urllib.parse.quote_plus(
-    "W@sab1dog") + "@cluster0.uobls.mongodb.net/Flightdb?retryWrites=true&w=majority")
+    "") + "@cluster0.uobls.mongodb.net/Flightdb?retryWrites=true&w=majority")
 db = client.Flightdb
 flights = db.Flights
 
