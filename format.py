@@ -16,7 +16,7 @@ flights = db.Flights
 #formats and inserts recieved flights into the flight database
 def atlas_insert(origin, destination, date):
     params = {
-        'access_key': '20c67b858bc47179dff380a64187cdd5',
+        'access_key': '',
         'limit': 3,
         'dep_iata': origin,
         'arr_iata': destination,
@@ -37,7 +37,7 @@ def atlas_insert(origin, destination, date):
 
 
 params = {
-    'access_key': '20c67b858bc47179dff380a64187cdd5',
+    'access_key': '',
     'limit': 4,
     'dep_iata': 'BOS',
     'arr_iata': 'JFK',
