@@ -28,3 +28,6 @@ From your IDE or commandline run the server file flight_app.py.
 
 Next open the main html template zulu.html in your web browser. You should be able to search for flights based on location and date.
 ![UI image](https://github.com/rodriguezcorraless/Zulu/blob/main/ZuluUI.PNG)
+
+# Demo
+https://www.youtube.com/watch?v=puVS-bWnRLA
